@@ -28,7 +28,7 @@ footer {
   font-size: 14px;
   height: 50px;
   justify-content: space-between;
-  position: absolute;
+  position: fixed;
   width: 100vw;
 }
 
