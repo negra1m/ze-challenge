@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <Main />
+    <router-view></router-view>
     <Footer />
   </div>
 </template>
@@ -22,7 +22,7 @@ export default {
 <style>
 html,
 body {
-  background-color: #af0b0b;
+  background-color: rgb(175, 11, 11);
   padding: 0;
   margin: 0;
   height: 100vh;

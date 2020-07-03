@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img class="logo" src="../../assets/ze.png" alt="Zé Delivery Logo" />
+    <img class="logo" src="../../assets/img/ze.png" alt="Zé Delivery Logo" />
   </header>
 </template>
 
