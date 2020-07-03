@@ -2,7 +2,7 @@
   <footer>
     <div class="meaning">
       <p>Challenge for Front End Position at:</p>
-      <img src="../../assets/ze.png" alt="logo Zé Delivery" />
+      <img src="../../assets/img/ze.png" alt="logo Zé Delivery" />
     </div>
     <div class="author-rights">
       <a href="http://www.github.com/negra1m">by Vinícius Negrão</a>
