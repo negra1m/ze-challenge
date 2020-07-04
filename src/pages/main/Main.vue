@@ -1,9 +1,9 @@
 <template>
   <div class="main">
     <div class="container shadow">
-      <Beer />
+      <Beer class="check" />
       <Title firstText="Bem vindo ao maior delivery" secondText=" de bebidas do Brasil!" />
-      <Input />
+      <Input class="upper" />
     </div>
   </div>
 </template>
@@ -20,14 +20,23 @@ export default {
     Input,
     Title
   },
+  props: {
+    show: Boolean
+  },
   data() {
     return {
       list: [],
-      loading: true,
-      show: true
+      loading: true
     };
   },
-  methods: {}
+  beforeCreate: function() {
+    this.checkUserScreen();
+  },
+  methods: {
+    checkUserScreen: function() {
+      window.innerWidth >= 750 ? (this.show = false) : (this.show = false);
+    }
+  }
 };
 </script>
 
@@ -48,6 +57,15 @@ body {
   .shadow {
     background: none;
   }
+
+  .check {
+    display: none;
+  }
+}
+
+.upper {
+  position: fixed;
+  bottom: 40%;
 }
 
 .main {

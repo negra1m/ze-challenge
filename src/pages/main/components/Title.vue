@@ -52,4 +52,21 @@ export default {
     opacity: 1;
   }
 }
+
+@media only screen and (max-width: 800px) {
+  .section-1 {
+    text-align: center;
+    width: 250px;
+  }
+
+  .section-2 {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .animated {
+    font-size: 40px;
+  }
+}
 </style>

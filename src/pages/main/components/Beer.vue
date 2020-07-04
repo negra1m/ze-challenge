@@ -24,16 +24,7 @@
 
 <script>
 export default {
-  name: "Beer",
-  components: {},
-  data() {
-    return {
-      list: [],
-      loading: true,
-      show: true
-    };
-  },
-  methods: {}
+  name: "Beer"
 };
 </script>
 
