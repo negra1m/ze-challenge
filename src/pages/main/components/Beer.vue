@@ -36,67 +36,65 @@ export default {
 
 <style>
 .top-body {
-  height: 20px;
-  width: 116px;
+  height: 10px;
+  width: 58px;
   -ms-flex-item-align: center;
   align-self: center;
   background-color: #686868;
-  margin-bottom: -8px;
-  margin-top: -3px;
+  margin-bottom: -3px;
+  margin-top: -6.5px;
   z-index: 2;
-  border: 2px solid black;
-  box-shadow: inset 0px 0px 6px 3px rgba(0, 0, 0, 0.7);
+  border: 1px solid black;
+  box-shadow: inset 0px 0px 3px 1.5px rgba(0, 0, 0, 0.7);
   border-style: none solid none solid;
 }
 .wave {
   display: flex;
-  height: 20px;
-  width: 220px;
+  height: 10px;
+  width: 110px;
   background-color: #686868;
   border-radius: 100%;
-  margin-top: -5px;
+  margin-top: -2.5px;
   border-style: none none solid none;
-  box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px 0px 2.5px 1.5px rgba(0, 0, 0, 1);
 }
 .top {
   background-color: #686868;
-  box-shadow: inset 0px 0px 5px 3px rgba(0, 0, 0, 1);
+  box-shadow: inset 0px 0px 2.5px 1.5px rgba(0, 0, 0, 1);
   border-radius: 100% 100% 50% 50%;
-  height: 10px;
-  width: 200px;
-
-  max-width: 120px;
-  margin-top: 10px;
+  height: 15px;
+  width: 60px;
+  margin-top: 2.5px;
   align-self: center;
 }
 
 .head {
-  max-width: 120px;
+  max-width: 60px;
   display: flex;
   justify-content: space-around;
   align-self: center;
   align-content: flex-end;
-  margin-bottom: -10px;
+  margin-bottom: -15px;
   z-index: 1;
 }
 
 .neck {
-  height: 450px;
-  width: 100px;
+  height: 225px;
+  width: 50px;
   align-self: center;
-  margin-bottom: -100px;
+  margin-bottom: -50px;
   display: flex;
   justify-content: space-between;
-  border-right: 20px solid black;
-  border: 20px solid rgba(0, 0, 0, 0.644) !important;
+  border-right: 10px solid black;
+  border: 10px solid rgba(0, 0, 0, 0.644) !important;
   border-radius: 200% 200% 500% 500% / 500% 500% 200% 200%;
 }
 
 .beer {
-  height: 900px;
-  width: 250px;
+  height: 450px;
+  width: 125px;
   /**/
-  border-radius: 0px 0px 30px 30px;
+  border-radius: 0px 0px 15px 15px;
   z-index: 1;
   display: flex;
   justify-content: flex-end;
@@ -108,24 +106,22 @@ export default {
 }
 
 .border {
-  border: 15px solid rgba(0, 0, 0, 0.596);
-  box-shadow: inset 0px 0px 57px -9px rgba(0, 0, 0, 1);
+  border: 7.5px solid rgba(0, 0, 0, 0.596);
+  box-shadow: inset 0px 0px 28.5px -4.5px rgba(0, 0, 0, 1);
 }
 
 .base {
   bottom: 0;
-  height: 80px;
-  box-shadow: inset 100px 20px 57px -9px rgb(59, 29, 0);
-  border-radius: 0px 0px 30px 30px;
-  margin-top: -16px;
+  height: 40px;
+  border-radius: 0px 0px 15px 15px;
+  margin-top: -8px;
 }
 
 .body {
-  height: 430px;
+  height: 215px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0px 0px 57px -9px rgba(0, 0, 0, 1);
 }
 
 .rotate {
@@ -148,10 +144,10 @@ export default {
 }
 
 .shoulder {
-  height: 100px;
+  height: 50px;
   border-style: none none solid solid;
   border-radius: 48% 52% 0% 100% / 100% 100% 0% 0%;
-  margin-bottom: -16px;
+  margin-bottom: -8px;
   z-index: 1;
 }
 </style>
