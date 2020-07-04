@@ -1,23 +1,20 @@
 <template>
   <div id="app">
     <Header />
-    <!-- <router-view></router-view> -->
-    <!-- <Footer /> -->
-    <Beer />
+    <router-view></router-view>
+    <Footer />
   </div>
 </template>
 
 <script>
 import Header from "./shared/components/Header.vue";
-// import Footer from "./shared/components/Footer.vue";
-import Beer from "./pages/main/components/Beer";
+import Footer from "./shared/components/Footer.vue";
 
 export default {
   name: "Ze",
   components: {
-    Beer,
-    Header
-    // Footer
+    Header,
+    Footer
   }
 };
 </script>
@@ -39,7 +36,8 @@ a {
   font-size: 12px;
 }
 
-p {
+p,
+h2 {
   padding: 0;
   margin: 0;
 }

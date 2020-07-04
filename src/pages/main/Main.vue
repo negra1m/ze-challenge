@@ -1,8 +1,9 @@
 <template>
   <div class="main">
     <div class="container shadow">
-      <Beer />
-      <Input />
+      <Beer class="check" />
+      <Title firstText="Bem vindo ao maior delivery" secondText=" de bebidas do Brasil!" />
+      <Input class="upper" />
     </div>
   </div>
 </template>
@@ -10,25 +11,36 @@
 <script>
 import Beer from "./components/Beer.vue";
 import Input from "./components/Input.vue";
+import Title from "./components/Title.vue";
 
 export default {
   name: "Main",
   components: {
     Beer,
-    Input
+    Input,
+    Title
+  },
+  props: {
+    show: Boolean
   },
   data() {
     return {
       list: [],
-      loading: true,
-      show: true
+      loading: true
     };
   },
-  methods: {}
+  beforeCreate: function() {
+    this.checkUserScreen();
+  },
+  methods: {
+    checkUserScreen: function() {
+      window.innerWidth >= 750 ? (this.show = false) : (this.show = false);
+    }
+  }
 };
 </script>
 
-<style>
+<style scoped>
 html,
 body {
   background-color: rgb(175, 11, 11);
@@ -45,6 +57,15 @@ body {
   .shadow {
     background: none;
   }
+
+  .check {
+    display: none;
+  }
+}
+
+.upper {
+  position: fixed;
+  bottom: 40%;
 }
 
 .main {
@@ -54,7 +75,7 @@ body {
   background-repeat: no-repeat;
   background-position-x: 45rem;
   background-position-y: -5rem;
-  height: 100vh;
+  height: 90vh;
 }
 
 .shadow {
@@ -68,6 +89,9 @@ body {
 }
 
 .container {
-  height: 100vh;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 </style>
