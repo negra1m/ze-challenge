@@ -1,21 +1,24 @@
 <template>
-  <div class="beer">
-    <div class="top"></div>
-    <div class="top-body"></div>
-    <div class="head">
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
-      <div class="wave"></div>
+  <div class="box">
+    <div class="beer">
+      <div class="top"></div>
+      <div class="top-body"></div>
+      <div class="head">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+      </div>
+      <div class="border neck color"></div>
+      <div class="border shoulder color"></div>
+      <div class="border body rotate"></div>
+      <div class="border base color"></div>
     </div>
-    <div class="border neck color"></div>
-    <div class="border shoulder color"></div>
-    <div class="border body rotate"></div>
-    <div class="border base color"></div>
+    <div class="floor"></div>
   </div>
 </template>
 
@@ -34,7 +37,14 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.floor {
+  width: 180px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: teal;
+}
+
 .top-body {
   height: 10px;
   width: 58px;
@@ -129,6 +139,18 @@ export default {
   background-size: cover;
   background-repeat: repeat-x;
   animation: animation 50s linear infinite;
+}
+
+.floor {
+  margin-top: -30px;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 10px 9px 10px rgba(0, 0, 0);
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 @-webkit-keyframes animation {

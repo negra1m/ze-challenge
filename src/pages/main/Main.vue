@@ -2,6 +2,7 @@
   <div class="main">
     <div class="container shadow">
       <Beer />
+      <Title firstText="Bem vindo ao maior delivery" secondText=" de bebidas do Brasil!" />
       <Input />
     </div>
   </div>
@@ -10,12 +11,14 @@
 <script>
 import Beer from "./components/Beer.vue";
 import Input from "./components/Input.vue";
+import Title from "./components/Title.vue";
 
 export default {
   name: "Main",
   components: {
     Beer,
-    Input
+    Input,
+    Title
   },
   data() {
     return {
@@ -28,7 +31,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 html,
 body {
   background-color: rgb(175, 11, 11);
@@ -54,7 +57,7 @@ body {
   background-repeat: no-repeat;
   background-position-x: 45rem;
   background-position-y: -5rem;
-  height: 100vh;
+  height: 90vh;
 }
 
 .shadow {
@@ -68,6 +71,9 @@ body {
 }
 
 .container {
-  height: 100vh;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 </style>

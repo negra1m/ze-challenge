@@ -36,7 +36,8 @@ a {
   font-size: 12px;
 }
 
-p {
+p,
+h2 {
   padding: 0;
   margin: 0;
 }
