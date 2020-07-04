@@ -62,6 +62,10 @@ export default {
   .section-2 {
     text-align: center;
   }
+
+  .animated {
+    font-size: 45px;
+  }
 }
 
 @media only screen and (max-width: 360px) {

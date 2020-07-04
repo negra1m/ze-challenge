@@ -35,17 +35,28 @@ footer {
 .meaning {
   align-items: center;
   display: flex;
+  justify-content: flex-start;
   height: 60px;
   padding-left: 1rem;
 }
 
 .meaning > img {
   height: 30px;
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 .author-rights {
   letter-spacing: 2px;
-  padding-right: 1rem;
+  padding-right: 0.75rem;
+}
+
+@media only screen and (max-width: 800px) {
+  footer {
+    font-size: 10px;
+  }
+
+  .author-rights {
+    text-align: right;
+  }
 }
 </style>

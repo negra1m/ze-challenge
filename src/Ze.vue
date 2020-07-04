@@ -22,7 +22,7 @@ export default {
 <style>
 html,
 body {
-  background-color: rgb(175, 11, 11);
+  background-color: rgb(109, 7, 7);
   padding: 0;
   margin: 0;
   height: 100vh;
