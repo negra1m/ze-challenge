@@ -9,10 +9,7 @@
         placeholder="Insira o seu endereço..."
         alt="Insira aqui seu endereço"
       />
-      <img
-        src="../../../assets/img/pointer.png"
-        alt="Icone de Mapa, campo para inserção do endereço"
-      />
+      <img src="assets/img/pointer.png" alt="Icone de Mapa, campo para inserção do endereço" />
     </div>
   </form>
 </template>

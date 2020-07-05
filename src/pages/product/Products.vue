@@ -18,16 +18,27 @@ export default {
   },
   data: function() {
     return {
-      address: String
+      address: String,
+      productsList: [],
+      test: String
     };
   },
   beforeMount: function() {
     this.checkAddress();
+    this.getData("https://api.code-challenge.ze.delivery/public/graphql/");
   },
   methods: {
     checkAddress: function() {
       this.$data.address = localStorage.getItem("address");
       console.log(localStorage.getItem("address"));
+    },
+
+    getData: function(url) {
+      let query =
+        "query pocSearchMethod($now: DateTime!, $algorithm: String!, $lat: String!, $long: String!) {pocSearch(now: '2017-08-01T20:00:00.000Z', algorithm: NEAREST, lat: -23.632919, long: -46.699453) {id}";
+      this.$axios.post(url, { query }).then(result => {
+        console.log(result.data);
+      });
     }
   }
 };

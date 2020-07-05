@@ -2,7 +2,7 @@
   <div class="info">
     <p>Seus produtos serão entregues em:</p>
     <span class="location">
-      <img width="50px" src="../../../assets/img/pointer.png" alt="Ícone de mapa" />
+      <img width="50px" src="assets/img/pointer.png" alt="Ícone de mapa" />
       <p>{{this.address}}</p>
     </span>
     <a @click="goToMain()">Alterar Endereço</a>
