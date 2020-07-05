@@ -19,6 +19,10 @@ export default {
 
 <!-- scoped faz com que o CSS seja aplicado somente a este componente -->
 <style scoped>
+a {
+  font-weight: 200;
+  font-size: 12px;
+}
 footer {
   align-items: center;
   background-color: #333;

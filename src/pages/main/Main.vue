@@ -40,7 +40,7 @@ export default {
     background-size: auto;
     background-position-x: 0 !important;
     background-position-y: -1rem !important;
-    height: 100vh;
+    height: calc(100% - 70px);
   }
 
   .shadow {

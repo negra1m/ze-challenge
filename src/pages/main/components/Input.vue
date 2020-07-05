@@ -1,22 +1,40 @@
 <template>
-  <div class="input">
-    <input type="text" placeholder="Insira o seu endereço..." alt="Insira aqui seu endereço" />
-    <img src="../../../assets/img/pointer.png" alt="Icone de Mapa, campo para inserção do endereço" />
-  </div>
+  <form v-on:submit.prevent>
+    <div class="input">
+      <input
+        id="address"
+        type="text"
+        v-model="address"
+        v-on:keyup.enter="search"
+        placeholder="Insira o seu endereço..."
+        alt="Insira aqui seu endereço"
+      />
+      <img
+        src="../../../assets/img/pointer.png"
+        alt="Icone de Mapa, campo para inserção do endereço"
+      />
+    </div>
+  </form>
 </template>
 
 <script>
 export default {
   name: "Input",
   components: {},
-  data() {
+  data: function() {
     return {
-      list: [],
-      loading: true,
-      show: true
+      address: String
     };
   },
-  methods: {}
+  methods: {
+    search: function() {
+      localStorage.setItem("address", this.address);
+      this.$router.push({ name: "Products" });
+    }
+  },
+  beforeMount() {
+    this.address = "";
+  }
 };
 </script>
 
