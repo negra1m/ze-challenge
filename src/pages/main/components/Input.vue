@@ -1,28 +1,46 @@
 <template>
-  <div class="input">
-    <input type="text" placeholder="Insira o seu endereço..." alt="Insira aqui seu endereço" />
-    <img src="../../../assets/img/pointer.png" alt="Icone de Mapa, campo para inserção do endereço" />
-  </div>
+  <form v-on:submit.prevent>
+    <div class="input">
+      <input
+        id="address"
+        type="text"
+        v-model="address"
+        v-on:keyup.enter="search"
+        placeholder="Insira o seu endereço..."
+        alt="Insira aqui seu endereço"
+      />
+      <img
+        src="../../../assets/img/pointer.png"
+        alt="Icone de Mapa, campo para inserção do endereço"
+      />
+    </div>
+  </form>
 </template>
 
 <script>
 export default {
   name: "Input",
   components: {},
-  data() {
+  data: function() {
     return {
-      list: [],
-      loading: true,
-      show: true
+      address: String
     };
   },
-  methods: {}
+  methods: {
+    search: function() {
+      localStorage.setItem("address", this.address);
+      this.$router.push({ name: "Products" });
+    }
+  },
+  beforeMount() {
+    this.address = "";
+  }
 };
 </script>
 
 <style>
 .input {
-  width: 30rem;
+  width: 25rem;
   height: 48px;
   border: 1px solid white;
   display: flex;
@@ -50,11 +68,11 @@ export default {
   margin-right: 10px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 320px) and (max-width: 420px) {
   .input {
     bottom: 20% !important;
-    width: 350px;
     height: 48px;
+    width: 18rem;
   }
 }
 </style>

@@ -21,8 +21,9 @@ export default {
 
 <style>
 html,
-body {
-  background-color: rgb(175, 11, 11);
+body,
+#app {
+  background-color: rgb(109, 7, 7);
   padding: 0;
   margin: 0;
   height: 100vh;
@@ -32,8 +33,9 @@ body {
 
 a {
   color: white;
-  text-decoration: none;
-  font-size: 12px;
+  text-decoration: underline;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 p,

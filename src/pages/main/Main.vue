@@ -29,29 +29,18 @@ export default {
       loading: true
     };
   },
-  beforeCreate: function() {
-    this.checkUserScreen();
-  },
-  methods: {
-    checkUserScreen: function() {
-      window.innerWidth >= 750 ? (this.show = false) : (this.show = false);
-    }
-  }
+  beforeCreate: function() {},
+  methods: {}
 };
 </script>
 
 <style scoped>
-html,
-body {
-  background-color: rgb(175, 11, 11);
-  margin: 0;
-  padding: 0;
-}
-
 @media only screen and (max-width: 800px) {
   .main {
-    background: #af0b0b;
-    background-image: none !important;
+    background-size: auto;
+    background-position-x: 0 !important;
+    background-position-y: -1rem !important;
+    height: calc(100% - 70px);
   }
 
   .shadow {
@@ -73,7 +62,7 @@ body {
   background-size: cover;
   background-blend-mode: color-dodge;
   background-repeat: no-repeat;
-  background-position-x: 45rem;
+  background-position-x: 30rem;
   background-position-y: -5rem;
   height: 90vh;
 }
@@ -82,8 +71,8 @@ body {
   background: rgb(255, 255, 255);
   background: linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(22, 22, 22, 0.52) 15%,
+    rgb(109, 7, 7) 0%,
+    rgba(22, 22, 22, 0.9) 50%,
     rgba(0, 0, 0, 0.9) 100%
   );
 }
