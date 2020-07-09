@@ -2,7 +2,7 @@
   <div class="info">
     <p>Seus produtos serão entregues em:</p>
     <span class="location">
-      <img width="50px" src="assets/img/pointer.png" alt="Ícone de mapa" />
+      <img width="50px" src="../../../assets/img/pointer.png" alt="Ícone de mapa" />
       <p>{{this.address}}</p>
     </span>
     <a @click="goToMain()">Alterar Endereço</a>
@@ -44,6 +44,8 @@ p {
 
 .location > p {
   font-weight: 400;
+  max-width: 400px;
+  text-align: center;
 }
 
 span {
@@ -52,6 +54,7 @@ span {
   margin: 2rem 0rem;
   height: 10rem;
   justify-content: center;
+  align-items: center;
 }
 
 span > img {

@@ -9,15 +9,22 @@
         placeholder="Insira o seu endereço..."
         alt="Insira aqui seu endereço"
       />
-      <img src="assets/img/pointer.png" alt="Icone de Mapa, campo para inserção do endereço" />
+      <img
+        src="../../../assets/img/pointer.png"
+        alt="Icone de Mapa, campo para inserção do endereço"
+      />
     </div>
+    <ProductsService />
   </form>
 </template>
 
 <script>
+import ProductsService from "../../../services/productsSearch.vue";
 export default {
   name: "Input",
-  components: {},
+  components: {
+    ProductsService
+  },
   data: function() {
     return {
       address: String
@@ -25,8 +32,26 @@ export default {
   },
   methods: {
     search: function() {
-      localStorage.setItem("address", this.address);
-      this.$router.push({ name: "Products" });
+      let url =
+        "https://maps.googleapis.com/maps/api/geocode/json?address=" +
+        this.address +
+        "&key=AIzaSyD9qpYgJKQ61mlNptAhR7OrGsQ5XHM5EzM"; //Key will be deleted in 1 week
+      this.$axios.get(url).then(data => {
+        if (data.error_message) {
+          // display error
+        } else {
+          console.log(data);
+          localStorage.setItem(
+            "address",
+            data.data.results[0].formatted_address
+          );
+          localStorage.setItem(
+            "location",
+            JSON.stringify(data.data.results[0].geometry.location)
+          );
+          this.$router.push({ name: "Products" });
+        }
+      });
     }
   },
   beforeMount() {
@@ -45,7 +70,6 @@ export default {
   align-items: center;
   border-radius: 15px;
   padding: 0.5rem 0.5rem;
-  /* background-color: rgba(255, 255, 255, 0.76); */
   box-shadow: 0px 0px 10px -2px rgb(255, 255, 255);
 }
 
