@@ -6,6 +6,7 @@
         type="text"
         v-model="address"
         v-on:keyup.enter="search"
+        v-on:click="cleanError"
         placeholder="Insira o seu endereço..."
         alt="Insira aqui seu endereço"
       />
@@ -14,20 +15,17 @@
         alt="Icone de Mapa, campo para inserção do endereço"
       />
     </div>
-    <ProductsService />
+    <p class="error-message" v-if="error">Não foi possivel encontrar o endereço.</p>
   </form>
 </template>
 
 <script>
-import ProductsService from "../../../services/productsSearch.vue";
 export default {
   name: "Input",
-  components: {
-    ProductsService
-  },
   data: function() {
     return {
-      address: String
+      address: String,
+      error: false
     };
   },
   methods: {
@@ -38,7 +36,7 @@ export default {
         "&key=AIzaSyD9qpYgJKQ61mlNptAhR7OrGsQ5XHM5EzM"; //Key will be deleted in 1 week
       this.$axios.get(url).then(data => {
         if (data.error_message) {
-          // display error
+          this.error = true;
         } else {
           console.log(data);
           localStorage.setItem(
@@ -52,6 +50,9 @@ export default {
           this.$router.push({ name: "Products" });
         }
       });
+    },
+    cleanError() {
+      this.error = false;
     }
   },
   beforeMount() {
@@ -82,6 +83,13 @@ export default {
   text-decoration: wavy;
   color: white;
   font-size: 16px;
+}
+
+.error-message {
+  color: rgba(255, 255, 255, 0.856);
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
 }
 
 .input > img {

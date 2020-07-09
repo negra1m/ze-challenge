@@ -192,4 +192,43 @@ export default {
   flex: 1;
   background-color: rgba(0, 0, 0, 0.5);
 }
+
+@media only screen and (min-width: 320px) and (max-width: 820px) {
+  .title-panel {
+    padding: 1rem 1rem;
+  }
+
+  ul {
+    padding: 0 0;
+  }
+
+  .panel {
+    margin: 0 0;
+  }
+
+  .card {
+    margin: 0 0;
+    height: 150px;
+  }
+
+  .image > img {
+    width: 100px;
+  }
+
+  .title,
+  .price {
+    font-size: 14px;
+  }
+
+  .btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .card-location {
+    display: none;
+  }
+}
 </style>

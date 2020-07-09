@@ -50,6 +50,10 @@ export default {
   .check {
     display: none;
   }
+
+  .upper {
+    bottom: 10% !important;
+  }
 }
 
 .upper {

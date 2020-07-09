@@ -48,4 +48,17 @@ export default {
   outline: none;
   background-color: transparent;
 }
+
+@media only screen and (min-width: 320px) and (max-width: 820px) {
+  #amount {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+  }
+
+  .amount > button {
+    width: 30px;
+    height: 30px;
+  }
+}
 </style>
