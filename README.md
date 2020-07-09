@@ -1,4 +1,4 @@
-# Zé Challenge
+# Zé Challenge - _developed using Vue_
 
 Desafio de programação realizado para a Zé Delivery.
 
