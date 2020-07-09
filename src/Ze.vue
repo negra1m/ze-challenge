@@ -43,4 +43,14 @@ h2 {
   padding: 0;
   margin: 0;
 }
+
+h3 {
+  color: white;
+  padding: 2rem 2rem;
+  font-weight: 200;
+}
+
+ul {
+  list-style: none;
+}
 </style>
